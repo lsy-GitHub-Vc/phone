@@ -1,0 +1,12 @@
+server {
+    listen       5000;
+    server_name  127.0.0.1;
+    charset utf-8;
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   html;
+    }
+    location /static {
+        alias /usr/src/app/static;
+    }
+}
